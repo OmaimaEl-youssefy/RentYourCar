@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UtilisateurController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="43.0" prefWidth="1024.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="UTILILSATEUR">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="100.0" layoutY="95.0" prefHeight="156.0" prefWidth="313.0" spacing="6.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" AnchorPane.topAnchor="95.0">
+            <children>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="44.0" prefWidth="119.0" text="Nom">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="name" prefHeight="25.0" prefWidth="178.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="14.0" top="10.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="44.0" prefWidth="119.0" text="password">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="password" prefHeight="25.0" prefWidth="178.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="14.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                  <Label prefHeight="44.0" prefWidth="119.0" text="En période congé">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                        <ChoiceBox fx:id="congeBox" prefHeight="25.0" prefWidth="170.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="14.0" top="10.0" />
+                            </HBox.margin>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="22.0" layoutY="104.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                  <Label prefHeight="44.0" prefWidth="119.0" text="Genre">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                        <ChoiceBox fx:id="genreBox" prefHeight="25.0" prefWidth="170.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="14.0" top="10.0" />
+                            </HBox.margin>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="252.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #e17055;" text="Ajouter" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets bottom="10.0" right="5.0" />
+                            </HBox.margin></Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets right="10.0" top="7.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </opaqueInsets>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </VBox>
+        <Separator layoutX="433.0" layoutY="91.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="14.0" />
+        <TableView fx:id="utilisateurTable" layoutX="106.0" layoutY="348.0" prefHeight="230.0" prefWidth="821.0">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="104.0" text=" Nom d'utilisateur" />
+                <TableColumn fx:id="colPassword" prefWidth="70.0" text="Password" />
+                <TableColumn fx:id="colConge" prefWidth="75.0" text="En période de congé" />
+                <TableColumn fx:id="colGenre" prefWidth="75.0" text="genre" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <VBox alignment="CENTER_LEFT" layoutX="100.0" layoutY="61.0" prefHeight="34.0" prefWidth="131.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un utilisateur" wrappingWidth="155.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <TextArea fx:id="resultConsole" layoutX="464.0" layoutY="287.0" prefHeight="43.0" prefWidth="460.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" />
+        <VBox layoutX="463.0" layoutY="91.0" prefHeight="158.0" prefWidth="460.0" style="-fx-border-color: #e17055; -fx-border-width: 2;">
+            <children>
+                <HBox prefHeight="43.0" prefWidth="456.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="chercherName" prefHeight="25.0" prefWidth="157.0" promptText="nom">
+                            <HBox.margin>
+                                <Insets left="10.0" right="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="chercherPassword" layoutX="15.0" layoutY="20.0" prefHeight="25.0" prefWidth="149.0" promptText="password">
+                            <HBox.margin>
+                                <Insets left="10.0" right="5.0" top="10.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="55.0" prefWidth="456.0">
+                    <children>
+                        <VBox prefHeight="62.0" prefWidth="167.0" spacing="10.0">
+                            <children>
+                                <Label text="Genre">
+                           <VBox.margin>
+                              <Insets bottom="-10.0" left="60.0" top="10.0" />
+                           </VBox.margin>
+                                </Label>
+                                <ChoiceBox fx:id="chercherconge" prefHeight="25.0" prefWidth="158.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </ChoiceBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="248.0" spacing="10.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="37.0" prefWidth="93.0" text="En periode congé">
+                           <VBox.margin>
+                              <Insets bottom="-10.0" left="50.0" top="10.0" />
+                           </VBox.margin>
+                                </Label>
+                                <ChoiceBox fx:id="cherchergenre" prefHeight="25.0" prefWidth="170.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </ChoiceBox>
+                            </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="36.0" prefWidth="456.0">
+                    <children>
+                        <Button mnemonicParsing="false" text="suspendre">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="10.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox prefHeight="30.0" prefWidth="456.0" spacing="25.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Modifier" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Supprimer" textFill="#f7f1e3">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                        <Button mnemonicParsing="false" onAction="#chercher" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Rechercher" textFill="#f7f1e3">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                        <Button mnemonicParsing="false" onAction="#afficherTout" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #e17055 #e17055;" text="afficher tout" textFill="#f7f1e3">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER_LEFT" layoutX="463.0" layoutY="57.0" prefHeight="34.0" prefWidth="126.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier/Supp/Rechercher/Afficher" wrappingWidth="205.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="464.0" layoutY="259.0" prefHeight="28.0" prefWidth="61.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Affichage" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

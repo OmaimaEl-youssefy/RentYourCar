@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="331.0" style="-fx-background-color: #ef4e0e;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="78.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IZO Rental Car Application" textAlignment="CENTER" wrappingWidth="175.6103515625">
+                    <font>
+                        <Font size="35.0" />
+                    </font>
+                </Text>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="16.0" layoutY="55.0" opacity="0.27" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/projet/logo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="userName" layoutX="235.0" layoutY="186.0" promptText="User name" style="-fx-background-color: transparent; -fx-border-color: #ef4e0e; -fx-border-width: 0px 0px 2px 0px;">
+                    <font>
+                        <Font size="18.0" />
+                    </font></TextField>
+                <PasswordField fx:id="password" layoutX="235.0" layoutY="243.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #ef4e0e; -fx-border-width: 0px 0px 2px 0px;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+            </PasswordField>
+                <Button layoutX="287.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadHome" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ef4e0e;" text="Login" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font></Button>
+                <Text fill="#ef4e0e" layoutX="196.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="302.513671875">
+                    <font>
+                        <Font size="64.0" />
+                    </font>
+                </Text>
+                <HBox layoutX="220.0" layoutY="340.0" prefHeight="28.0" prefWidth="279.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

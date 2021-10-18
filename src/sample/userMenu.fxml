@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.menuController">
+    <center>
+        <AnchorPane fx:id="ap" prefHeight="347.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" layoutX="320.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME" wrappingWidth="107.412109375">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+                </Text>
+            </children></AnchorPane>
+    </center>
+    <left>
+        <VBox prefHeight="490.0" prefWidth="134.0" style="-fx-background-color: #e17055; -fx-border-color: #FFFFFF;" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#loadFirstPage" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="HOME" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#loadClient" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Client" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#loadReservation" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Reservation" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#loadFacture" onMouseClicked="#loadFacture" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Facture" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#loadContrat" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Contrat" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#loadVehicule" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Vehicule" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="298.0" mnemonicParsing="false" onAction="#loadParking" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Parking" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            <Button layoutX="10.0" layoutY="298.0" mnemonicParsing="false" onAction="#loadBarChart" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-width: 0PX 0PX 2PX 0PX;" text="Statistics" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="346.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT;" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="394.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT;" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="442.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT;" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="490.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="134.0" style="-fx-background-color: TRANSPARENT;" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <HBox prefHeight="20.0" prefWidth="142.0">
+               <children>
+                  <Text fill="#eaeaea" strokeType="OUTSIDE" strokeWidth="0.0" text="All rights resserved @2020" wrappingWidth="127.01171875">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            </children></VBox>
+    </left>
+</BorderPane>

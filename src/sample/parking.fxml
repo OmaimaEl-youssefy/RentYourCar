@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ParkingController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="43.0" prefWidth="1024.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PARKING">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="118.0" layoutY="96.0" prefHeight="215.0" prefWidth="264.0" spacing="6.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" AnchorPane.topAnchor="96.0">
+            <children>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="38.0" prefWidth="116.0" text="Numerp Parking">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="numParking" prefHeight="25.0" prefWidth="162.0">
+                            <HBox.margin>
+                                <Insets right="18.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="38.0" prefWidth="113.0" text="Capacité">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="capacite" prefHeight="25.0" prefWidth="162.0">
+                            <HBox.margin>
+                                <Insets right="18.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="115.0" text="Rue">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="rue" prefHeight="25.0" prefWidth="162.0">
+                            <HBox.margin>
+                                <Insets right="18.0" />
+                            </HBox.margin></TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="22.0" layoutY="12.0" prefHeight="46.0" prefWidth="254.0">
+                    <children>
+                        <Label fx:id="numParking1" prefHeight="39.0" prefWidth="95.0" text="Arrondissement">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="arrondissement" prefHeight="25.0" prefWidth="144.0">
+                            <HBox.margin>
+                                <Insets right="18.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="240.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: #e17055;" text="Ajouter" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets right="40.0" />
+                            </HBox.margin></Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets right="10.0" top="7.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </opaqueInsets>
+            <padding>
+                <Insets left="10.0" top="5.0" />
+            </padding>
+        </VBox>
+        <Separator layoutX="434.0" layoutY="70.0" orientation="VERTICAL" prefHeight="237.0" prefWidth="14.0" />
+        <TableView fx:id="parkingTable" layoutX="472.0" layoutY="339.0" prefHeight="237.0" prefWidth="459.0">
+            <columns>
+                <TableColumn fx:id="colParkingId" prefWidth="104.0" text="ID Parking" />
+                <TableColumn fx:id="colNumParking" prefWidth="104.0" text="numero parking" />
+                <TableColumn fx:id="colcapacite" prefWidth="70.0" text="capacité" />
+                <TableColumn fx:id="colRue" prefWidth="92.0" text="rue" />
+                <TableColumn fx:id="colArrondissement" prefWidth="75.0" text="arrondissement" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <VBox alignment="CENTER_LEFT" layoutX="118.0" layoutY="62.0" prefHeight="34.0" prefWidth="131.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter les données" wrappingWidth="126.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <TextArea fx:id="resultConsole" layoutX="472.0" layoutY="258.0" prefHeight="51.0" prefWidth="459.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" />
+        <VBox layoutX="471.0" layoutY="95.0" prefHeight="133.0" prefWidth="459.0" style="-fx-border-color: #e17055; -fx-border-width: 2;">
+            <children>
+                <HBox prefHeight="51.0" prefWidth="264.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="chercherNumPaking" prefHeight="25.0" prefWidth="166.0" promptText="numero parking">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="chercherCapacite" promptText="capacité">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="chercherRue" promptText="rue">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="chercherArrondissement" prefHeight="25.0" prefWidth="157.0" promptText="arrondissement">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <padding>
+                        <Insets right="3.0" />
+                    </padding>
+                </HBox>
+                <HBox prefHeight="39.0" prefWidth="414.0">
+                    <children>
+                        <TextField fx:id="numVehicule" prefHeight="25.0" prefWidth="134.0" promptText="num Immatriculation">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="Park" prefHeight="25.0" prefWidth="94.0" promptText="num parking" />
+                        <Button mnemonicParsing="false" onAction="#restituerVehicule" text="Restituer ">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deposerVehicule" text="deposer">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#sortirVehicule" text="faire sortir">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox prefHeight="28.0" prefWidth="352.0" spacing="25.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Modifier" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Supprimer" textFill="#f7f1e3" />
+                        <Button mnemonicParsing="false" onAction="#chercher" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Rechercher" textFill="#f7f1e3" />
+                        <Button mnemonicParsing="false" onAction="#afficherTout" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #e17055 #e17055;" text="afficher tout" textFill="#f7f1e3" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER_LEFT" layoutX="471.0" layoutY="62.0" prefHeight="34.0" prefWidth="126.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier/Supp/Rechercher/Afficher" wrappingWidth="205.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="472.0" layoutY="230.0" prefHeight="28.0" prefWidth="61.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Affichage" />
+            </children>
+        </VBox>
+        <ChoiceBox fx:id="parkingBox" layoutX="244.0" layoutY="319.0" prefHeight="25.0" prefWidth="42.0" />
+        <Label layoutX="135.0" layoutY="322.0" prefHeight="19.0" prefWidth="98.0" text="Numero Parking">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Button layoutX="274.0" layoutY="353.0" mnemonicParsing="false" onAction="#nombreDeplaceVide" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #e17055;" text="Nombre de place vide" textFill="#f7f1e3" />
+        <HBox layoutX="122.0" layoutY="383.0" prefHeight="193.0" prefWidth="305.0" style="-fx-border-color: #e17055; -fx-border-width: 2;">
+            <children>
+                <VBox prefHeight="205.0" prefWidth="181.0">
+                    <children>
+                        <TableView fx:id="parkingVehiculeTable" prefHeight="206.0" prefWidth="148.0">
+                            <columns>
+                                <TableColumn fx:id="colVehicule" prefWidth="146.0" text="vehicule" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_RIGHT" prefHeight="205.0" prefWidth="187.0">
+                    <children>
+                        <TextField fx:id="placeVide" prefHeight="78.0" prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" top="50.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Button layoutX="134.0" layoutY="353.0" mnemonicParsing="false" onAction="#chercherVehiculeSelonParking" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #e17055;" text="Afficher les vehicules" textFill="#f7f1e3" />
+    </children>
+</AnchorPane>

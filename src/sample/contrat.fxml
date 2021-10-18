@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ContratController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="43.0" prefWidth="1024.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRAT">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="117.0" layoutY="95.0" prefHeight="175.0" prefWidth="264.0" spacing="6.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" AnchorPane.topAnchor="95.0">
+            <children>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="48.0" prefWidth="85.0" text="Date contrat ">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="1.0" />
+                            </HBox.margin>
+                        </Label>
+                        <DatePicker fx:id="dateContrat" prefHeight="25.0" prefWidth="159.0" promptText="jj/mm/aa">
+                            <HBox.margin>
+                                <Insets bottom="15.0" left="6.0" right="4.0" top="11.0" />
+                            </HBox.margin>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </DatePicker>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="254.0">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="103.0" text="Date echeance">
+                            <font>
+                                <Font name="System Bold" size="11.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="dateEcheance" prefHeight="25.0" prefWidth="172.0" promptText="jj/mm/aa">
+                            <HBox.margin>
+                                <Insets right="14.0" />
+                            </HBox.margin></DatePicker>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="252.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: #e17055;" text="Ajouter" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets right="40.0" />
+                            </HBox.margin></Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets right="10.0" top="7.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </opaqueInsets>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </VBox>
+        <Separator layoutX="415.0" layoutY="73.0" orientation="VERTICAL" prefHeight="279.0" prefWidth="14.0" />
+        <TableView fx:id="ContratTable" layoutX="497.0" layoutY="322.0" prefHeight="197.0" prefWidth="407.0">
+            <columns>
+                <TableColumn fx:id="colNumContrat" prefWidth="104.0" text="Numero contrat" />
+                <TableColumn fx:id="coldateContrat" prefWidth="70.0" text="date contrat" />
+                <TableColumn fx:id="coldateEcheance" prefWidth="92.0" text="date echeance" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <VBox alignment="CENTER_LEFT" layoutX="117.0" layoutY="61.0" prefHeight="34.0" prefWidth="131.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un contrat" wrappingWidth="126.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <TextArea fx:id="resultConsole" layoutX="497.0" layoutY="232.0" prefHeight="77.0" prefWidth="407.0" style="-fx-border-color: #e17055; -fx-border-width: 2;" />
+        <VBox layoutX="497.0" layoutY="95.0" prefHeight="96.0" prefWidth="407.0" style="-fx-border-color: #e17055; -fx-border-width: 2;">
+            <children>
+                <HBox prefHeight="51.0" prefWidth="264.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="chercherNumContrat" promptText="Numero contrat">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <DatePicker fx:id="chercherdateContrat" promptText="jj/mm/aa">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </DatePicker>
+                        <DatePicker fx:id="chercherdateEcheance" promptText="jj/mm/aa">
+                            <HBox.margin>
+                                <Insets left="5.0" top="10.0" />
+                            </HBox.margin>
+                        </DatePicker>
+                    </children>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                </HBox>
+                <HBox prefHeight="28.0" prefWidth="352.0" spacing="25.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Modifier" textFill="#f7f1e3">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Supprimer" textFill="#f7f1e3" />
+                        <Button mnemonicParsing="false" onAction="#chercher" style="-fx-background-color: rgba(178, 190, 195,1.0);" text="Rechercher" textFill="#f7f1e3" />
+                        <Button mnemonicParsing="false" onAction="#afficherTout" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #e17055 #e17055;" text="afficher tout" textFill="#f7f1e3" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER_LEFT" layoutX="497.0" layoutY="61.0" prefHeight="34.0" prefWidth="126.0" spacing="5.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier/Supp/Rechercher/Afficher" wrappingWidth="205.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="497.0" layoutY="204.0" prefHeight="28.0" prefWidth="61.0" style="-fx-background-color: #e17055;">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Affichage" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
